@@ -7,10 +7,10 @@ services:
     volumes:
       - ./data/mysql/conf.d:/etc/mysql/conf.d
       - ./data/mysql/data:/var/lib/mysql
-      - ./data/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      # - ./data/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=TEST
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=DEMOUSER
+      - MYSQL_USER=data_grand
+      - MYSQL_PASSWORD=23Knowledge
       - TZ=Asia/Shanghai
