@@ -1,0 +1,15 @@
+version: "3"
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "53306:3306"
+    volumes:
+      - ./data/mysql/conf.d:/etc/mysql/conf.d
+      - ./data/mysql/data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: demo_user
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      TZ: Asia/Shanghai
