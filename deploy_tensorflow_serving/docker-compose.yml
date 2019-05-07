@@ -1,0 +1,10 @@
+version: "3.4"
+services:
+  mysql:
+    image: tensorflow/serving:1.10.0
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./models/signet_detection_model:/models/signet_detection
+    environment:
+      - MODEL_NAME=signet_detection
